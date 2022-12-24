@@ -1,3 +1,31 @@
+<!-- PHP nya -->
+<?php
+session_start();
+
+include 'function.php';
+
+if (isset($_POST['submit'])) {
+    //Ngambil data dari form
+    $layanan = $_POST['layanan'];
+    $nama_lengkap = $_POST['nama_lengkap'];
+    $no_telepon = $_POST['no_telepon'];
+    $cabang = $_POST['cabang'];
+    $waktu_reservasi = $_POST['waktu_reservasi'];
+    $sql4 = "INSERT INTO reservasi (nama_lengkap, no_telepon, layanan, cabang, waktu_reservasi) 
+    VALUES ('$nama_lengkap', '$no_telepon', '$layanan', '$cabang', '$waktu_reservasi')";
+    $q4 = mysqli_query($koneksi, $sql4);
+    if ($q4) {
+        $success = "Berhasil reservasi";
+        if ($success) {
+            header("refresh:1;url=reservasi.php");
+        }
+    } else {
+        $error = "Gagal reservasi";
+    }
+
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -41,52 +69,57 @@
         <p class="loginscreen titletxt">Reservasi</p>
 
         <div class="lefttext">
-            <input id="name" class="inputdata" type="text" placeholder="Full Name">
-            <br><br>
-            <input id="phone" class="inputdata" type="phone" placeholder="Phone Number">
-            <br><br>
-            <p id="warnareg">Services</p>
-            <input id="pedicure" class="inputservices" type="checkbox" placeholder="Services">
-            <label>Pedicure</label>
-            <input id="manicure" class="inputservices" type="checkbox" placeholder="Services">
-            <label>Manicure</label>
-			<input id="haircut" class="inputservices" type="checkbox" placeholder="Services">
-            <label>Haircut</label>
-            <br><br>
-
-            <div id="warnareg">
-                <label id="city">City</label>
+            <form action="" method="POST">
+                
+                <input id="name" class="inputdata" type="text" placeholder="Full Name">
                 <br><br>
-                <select id="city">
-                    <option value="">Select your city</option>
-                    <option>Jakarta</option>
-                    <option>Bekasi</option>
-                    <option>Bogor</option>
-                    <option>Tangerang</option>
-                </select>
-            </div>
-
-            <div id="warnareg">
-                <label id="time">Time</label>
-                <br><br>
-                <select id="time">
-                    <option value="">Select your time visit</option>
-                    <option>Morning (09.00 - 12.00)</option>
-                    <option>Noon (12.00 - 15.00)</option>
-                    <option>Afternoon (15.00 - 18.00)</option>
-                    <option>Night (18.00 - 20.00)</option>
-                </select>
-            </div>
-			
-            <input type="submit" value="Reserve" onclick="reservasi()">
             
-			<p id="Nameerror"></p>
-            <p id="Phoneerror"></p>
-            <p id="Gendererror"></p>
-            <p id="Nohome"></p>
-            <p id="Timeerror"></p>
-        </div>
-           
+                <input id="phone" class="inputdata" type="phone" placeholder="Phone Number">
+                <br><br>
+            
+                <p id="warnareg">Services</p>
+                <input id="pedicure" class="inputservices" type="checkbox" placeholder="Services">
+                <label>Pedicure</label>
+                <input id="manicure" class="inputservices" type="checkbox" placeholder="Services">
+                <label>Manicure</label>
+                <input id="haircut" class="inputservices" type="checkbox" placeholder="Services">
+                <label>Haircut</label>
+                <br><br>
+            
+                <div id="warnareg">
+                    <label id="city">City</label>
+                    <br><br>
+                    <select id="city">
+                        <option value="">Select your city</option>
+                        <option>Jakarta</option>
+                        <option>Bekasi</option>
+                        <option>Bogor</option>
+                        <option>Tangerang</option>
+                    </select>
+                </div>
+            
+                <div id="warnareg">
+                    <label id="time">Time</label>
+                    <br><br>
+                    <select id="time">
+                        <option value="">Select your time visit</option>
+                        <option>Morning (09.00 - 12.00)</option>
+                        <option>Noon (12.00 - 15.00)</option>
+                        <option>Afternoon (15.00 - 18.00)</option>
+                        <option>Night (18.00 - 20.00)</option>
+                    </select>
+                </div>
+            
+                <input type="submit" value="Reserve" onclick="reservasi()">
+            
+                <p id="Nameerror"></p>
+                <p id="Phoneerror"></p>
+                <p id="Gendererror"></p>
+                <p id="Nohome"></p>
+                <p id="Timeerror"></p>
+                </div>
+        
+            </form>   
     </div>
 </body>
 <footer>
