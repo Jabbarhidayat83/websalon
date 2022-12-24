@@ -22,13 +22,13 @@
 			</div>
 			<div class="sub-burger">
 				 <br>
-				 <a id="text1" href="salon.html">Home</a>
+				 <a id="text1" href="salon.php">Home</a>
 				 <br>
 				 <br>
-				 <a id="text1" href="services.html">Services</a>
+				 <a id="text1" href="services.php">Services</a>
 				 <br>
 				 <br>
-				 <a id="text1" href="about.html">About Us</a>
+				 <a id="text1" href="about.php">About Us</a>
 				 <br>
 				 <br>
 				 <a id="text1" href="reserve.php">Reservation</a>
