@@ -31,7 +31,7 @@
 				 <a id="text1" href="about.html">About Us</a>
 				 <br>
 				 <br>
-				 <a id="text1" href="reserve.html">Reservation</a>
+				 <a id="text1" href="reserve.php">Reservation</a>
 			</div> 
 		</div>   
 	</div>
