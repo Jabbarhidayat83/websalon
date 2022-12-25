@@ -6,6 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>salon</title>
 	<link rel="stylesheet" href="salon.css">
+	<link rel="stylesheet" href="style/style.css">
 </head>
 <header>
 	<div id="navbar">
@@ -22,16 +23,16 @@
 			</div>
 			<div class="sub-burger">
 				 <br>
-				 <a id="text1" href="salon.html">Home</a>
+				 <a id="text1" href="salon.php">Home</a>
 				 <br>
 				 <br>
-				 <a id="text1" href="services.html">Services</a>
+				 <a id="text1" href="services.php">Services</a>
 				 <br>
 				 <br>
-				 <a id="text1" href="about.html">About Us</a>
+				 <a id="text1" href="about.php">About Us</a>
 				 <br>
 				 <br>
-				 <a id="text1" href="reserve.html">Reservation</a>
+				 <a id="text1" href="reserve.php">Reservation</a>
 			</div> 
 		</div>   
 	</div>

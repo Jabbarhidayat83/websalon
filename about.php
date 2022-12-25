@@ -11,10 +11,10 @@
 	<div id="navbar">
 		<img class="salon" src="" alt="salon">
 		<div class="navbarrc">
-			 <a class="home" href="salon.html">Home</a>
-			 <a class="services" href="services.html"> Services</a>
-			 <a class="about" href="about.html">About Us</a>
-			 <a class="reserve" href="reserve.html">Reservation</a>
+			 <a class="home" href="salon.php">Home</a>
+			 <a class="services" href="services.php"> Services</a>
+			 <a class="about" href="about.php">About Us</a>
+			 <a class="reserve" href="reserve.php">Reservation</a>
 		</div>
 		<div class="dropdown">
 			<div class="burger-top">
